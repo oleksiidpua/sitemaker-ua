@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "Sitemaker.UA — Websites that sell | Web development in Ukraine",
+    "description": "Sitemaker.UA web studio. We build business cards, landing pages, corporate sites and online stores. Fast, responsive, SEO-ready. Ukraine and Europe. From 5000 UAH.",
+    "ogTitle": "Sitemaker.UA — websites that sell",
+    "ogDescription": "Modern turnkey websites. Design, code, SEO, hosting. Working across Ukraine and Europe."
+  },
+  "nav": {
+    "services": "Services",
+    "why": "Why us",
+    "process": "Process",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Get a quote"
+  },
+  "hero": {
+    "badge": "Full-cycle web studio",
+    "titleStart": "Building",
+    "titleAccent": "websites",
+    "titleEnd": "that sell",
+    "subtitle": "Modern, fast and responsive sites — from idea to launch, all under one roof. Ukraine and Europe.",
+    "ctaPrimary": "Get a quote",
+    "ctaSecondary": "Services & pricing",
+    "stats": {
+      "speed": "Page load",
+      "speedValue": "< 2 sec",
+      "delivery": "Delivery",
+      "deliveryValue": "from 5 days",
+      "support": "Support",
+      "supportValue": "24/7"
+    }
+  },
+  "services": {
+    "tag": "What we do",
+    "title": "Services & pricing",
+    "subtitle": "Pick a format — we'll discuss the details and tailor the solution to your budget and goals.",
+    "items": {
+      "card": {
+        "name": "Business card site",
+        "price": "from 5,000 UAH",
+        "description": "A concise page with information about you, services and contacts. Ideal for professionals and small businesses.",
+        "features": ["Up to 5 sections", "Responsive design", "SEO optimization", "Launch in 5 days"]
+      },
+      "landing": {
+        "name": "Landing page",
+        "price": "from 8,000 UAH",
+        "description": "A single-page site focused on conversion. Sells a product, service or campaign.",
+        "features": ["Tailored design", "Forms & integrations", "A/B testing", "Analytics"]
+      },
+      "corporate": {
+        "name": "Corporate website",
+        "price": "from 15,000 UAH",
+        "description": "Multi-page company site: services, portfolio, blog, team, contacts.",
+        "features": ["Up to 15 pages", "CMS for editing", "Blog & news", "Multi-language"]
+      },
+      "shop": {
+        "name": "Online store",
+        "price": "from 25,000 UAH",
+        "description": "Full e-commerce: catalog, cart, payment, delivery, customer accounts.",
+        "features": ["Product catalog", "Online payment", "Nova Poshta integration", "Admin panel"]
+      }
+    },
+    "cta": "Discuss the project"
+  },
+  "why": {
+    "tag": "Why Sitemaker.UA",
+    "title": "What you get",
+    "items": {
+      "speed": {
+        "title": "Speed",
+        "description": "The site loads in under 2 seconds. Google rewards fast sites — you get more customers from search."
+      },
+      "seo": {
+        "title": "SEO out of the box",
+        "description": "Semantic markup, meta tags, Open Graph, sitemap, robots.txt. Ready to be indexed from day one."
+      },
+      "responsive": {
+        "title": "Responsive",
+        "description": "Mobile-first approach. Looks perfect on iPhone, Android, tablets and wide monitors."
+      },
+      "support": {
+        "title": "Support",
+        "description": "We don't disappear after launch. We fix bugs, add features and answer your questions."
+      }
+    }
+  },
+  "process": {
+    "tag": "How we work",
+    "title": "Four steps to launch",
+    "steps": {
+      "brief": {
+        "number": "01",
+        "title": "Brief",
+        "description": "We discuss your goals, audience and competitors. We draft the spec and lock in deadlines."
+      },
+      "design": {
+        "number": "02",
+        "title": "Design",
+        "description": "We design the layout in Figma. We iterate until it fully matches your vision."
+      },
+      "development": {
+        "number": "03",
+        "title": "Development",
+        "description": "We code on a modern Next.js stack. We hook up analytics, forms and integrations."
+      },
+      "launch": {
+        "number": "04",
+        "title": "Launch",
+        "description": "We deploy to hosting, configure your domain, run final tests and hand over the keys."
+      }
+    }
+  },
+  "faq": {
+    "tag": "Answers",
+    "title": "Frequently asked",
+    "items": {
+      "q1": {
+        "question": "How much does a website cost?",
+        "answer": "It depends on type and features. Business card — from 5,000 UAH; landing — from 8,000 UAH; corporate — from 15,000 UAH; online store — from 25,000 UAH. We'll quote precisely after the brief."
+      },
+      "q2": {
+        "question": "How long does it take?",
+        "answer": "Business card — 5 days. Landing — 7-10 days. Corporate — 2-3 weeks. Online store — from 4 weeks. Timing depends on scope and feedback speed."
+      },
+      "q3": {
+        "question": "Do I need a domain and hosting?",
+        "answer": "Yes. We'll help pick a domain (~10 USD/year) and connect free Vercel hosting. Domain is not included in the price, but setup is on us."
+      },
+      "q4": {
+        "question": "Can I request changes after launch?",
+        "answer": "Yes. The first month of fixes is free. After that — hourly rate or a monthly support plan."
+      },
+      "q5": {
+        "question": "How does payment work?",
+        "answer": "50% upfront, 50% on launch. We can invoice through a private entrepreneur (FOP) or accept a card transfer."
+      },
+      "q6": {
+        "question": "Do you work with clients in Europe?",
+        "answer": "Yes. We work remotely across Europe. Communication in Ukrainian, Russian or English."
+      }
+    }
+  },
+  "contact": {
+    "tag": "Get in touch",
+    "title": "Ready to discuss your project?",
+    "subtitle": "Send a request — we'll reply within an hour during work hours.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Alex",
+      "contact": "Telegram or Email",
+      "contactPlaceholder": "@username or email@example.com",
+      "message": "Tell us about your project",
+      "messagePlaceholder": "Site type, rough budget, timeline...",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Thanks! We'll be in touch shortly.",
+      "errorRequired": "This field is required",
+      "errorContact": "Provide Telegram or Email",
+      "errorShort": "Please describe the project in more detail"
+    },
+    "or": "or reach us directly",
+    "telegram": "Telegram",
+    "email": "Email"
+  },
+  "footer": {
+    "tagline": "Building websites that work for your business.",
+    "navTitle": "Sections",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "made": "Made in Ukraine"
+  },
+  "floating": {
+    "telegram": "Message on Telegram",
+    "toTop": "To top"
+  },
+  "language": {
+    "label": "Language",
+    "uk": "Українська",
+    "ru": "Русский",
+    "en": "English"
+  }
+}
