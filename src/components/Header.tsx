@@ -20,11 +20,12 @@ export default function Header() {
   }, []);
 
   const links = [
-    { href: "#services", label: t("services") },
-    { href: "#why", label: t("why") },
-    { href: "#process", label: t("process") },
-    { href: "#faq", label: t("faq") },
-    { href: "#contact", label: t("contact") },
+    { href: "/#services", label: t("services") },
+    { href: "/#why", label: t("why") },
+    { href: "/#process", label: t("process") },
+    { href: "/blog", label: t("blog") },
+    { href: "/#faq", label: t("faq") },
+    { href: "/#contact", label: t("contact") },
   ];
 
   return (
@@ -55,24 +56,24 @@ export default function Header() {
 
           <nav className="hidden items-center gap-1 md:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="rounded-full px-3.5 py-2 text-sm text-muted transition hover:bg-background hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="hidden rounded-full bg-foreground px-4 py-2 text-sm font-medium text-surface transition hover:bg-lavender-strong sm:inline-flex"
             >
               {t("cta")}
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}
@@ -101,22 +102,22 @@ export default function Header() {
           <div className="mt-2 rounded-2xl border border-border bg-surface p-3 shadow-[0_10px_40px_-15px_rgba(31,27,46,0.15)] md:hidden">
             <nav className="flex flex-col gap-1">
               {links.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
                   className="rounded-xl px-4 py-2.5 text-sm text-foreground hover:bg-background"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-1 rounded-xl bg-foreground px-4 py-2.5 text-center text-sm font-medium text-surface"
               >
                 {t("cta")}
-              </a>
+              </Link>
             </nav>
           </div>
         ) : null}

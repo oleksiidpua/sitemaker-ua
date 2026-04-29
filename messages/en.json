@@ -11,7 +11,21 @@
     "process": "Process",
     "faq": "FAQ",
     "contact": "Contact",
+    "blog": "Blog",
     "cta": "Get a quote"
+  },
+  "blog": {
+    "tag": "Blog",
+    "indexTitle": "Sitemaker.UA Blog",
+    "indexDescription": "Pricing, tech and marketing for websites. Useful reads for business owners.",
+    "readMore": "Read more",
+    "empty": "No posts yet. First articles coming soon.",
+    "backToList": "All articles",
+    "cta": {
+      "title": "Ready to discuss your project?",
+      "description": "Send us a brief — we'll estimate cost and timeline for free.",
+      "button": "Get an estimate"
+    }
   },
   "hero": {
     "badge": "Full-cycle web studio",
