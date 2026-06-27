@@ -21,15 +21,16 @@ function validateContact(value: string) {
 export default function Contact() {
   const t = useTranslations("contact");
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const contact = String(data.get("contact") || "").trim();
     const message = String(data.get("message") || "").trim();
+    const company = String(data.get("company") || ""); // honeypot
 
     const newErrors: Errors = {};
     if (!name) newErrors.name = t("form.errorRequired");
@@ -45,11 +46,19 @@ export default function Contact() {
     if (Object.keys(newErrors).length) return;
 
     setStatus("sending");
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, contact, message, company }),
+      });
+      if (!res.ok) throw new Error("request failed");
       setStatus("success");
       form.reset();
-      setTimeout(() => setStatus("idle"), 5000);
-    }, 1100);
+      setTimeout(() => setStatus("idle"), 6000);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -109,6 +118,15 @@ export default function Contact() {
 
             <form onSubmit={onSubmit} noValidate className="p-8 sm:p-10 lg:p-12">
               <div className="space-y-5">
+                {/* honeypot — скрыто от людей, ловит ботов */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: 0, height: 0, opacity: 0 }}
+                />
                 <Field
                   name="name"
                   label={t("form.name")}
@@ -157,6 +175,16 @@ export default function Contact() {
                     className="rounded-xl bg-mint/30 px-4 py-3 text-sm text-foreground"
                   >
                     {t("form.success")}
+                  </motion.p>
+                ) : null}
+
+                {status === "error" ? (
+                  <motion.p
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="rounded-xl bg-red-100 px-4 py-3 text-sm text-red-700"
+                  >
+                    {t("form.error")}
                   </motion.p>
                 ) : null}
               </div>

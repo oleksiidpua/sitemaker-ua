@@ -170,7 +170,8 @@
       "success": "Thanks! We'll be in touch shortly.",
       "errorRequired": "This field is required",
       "errorContact": "Provide Telegram or Email",
-      "errorShort": "Please describe the project in more detail"
+      "errorShort": "Please describe the project in more detail",
+      "error": "Couldn't send. Please try again or message us on Telegram."
     },
     "or": "or reach us directly",
     "telegram": "Telegram",
